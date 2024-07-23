@@ -15,7 +15,7 @@ const SubBody1 = () => {
         {/* //1 */}
         <div className="w-[50%] ml-[2rem] bg-white rounded-lg justify-between ">
           <div className="pb-4">
-            <h1 className="text-4xl md:text-5xl font-bold text-pink-800" style={{ fontFamily: "'Dancing Script', cursive" }}>
+            <h1 className="text-4xl md:text-5xl font-bold text-pink-800 italic" style={{ fontFamily: "'Dancing Script', cursive" }}>
               Welcome!
             </h1>
             <p className="mb-4 text-justify text-md">

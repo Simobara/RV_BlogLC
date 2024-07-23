@@ -10,16 +10,20 @@ const SubBody3 = () => {
   useEffect(() => {
     const link = document.createElement('link');
     link.href = 'https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap';
+    link.href = 'https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap';
     link.rel = 'stylesheet';
     document.head.appendChild(link);
   }, []);
 
   return (
-    <div className="relative bg-gray-200 text-black w-full h-[40rem] flex flex-col items-center justify-start pt-4">
-      <div className="text-[2rem] font-bold text-center">COME PUO&apos; AIUTARTI UNA BUSINESS COACH</div>
-      <h1 className="absolute mt-[2rem] text-4xl md:text-5xl font-bold text-pink-800" style={{ fontFamily: "'Dancing Script', cursive" }}>
+    <div className="relative bg-white text-black w-full h-[35rem] flex flex-col items-center justify-start pt-4 mt-[4rem]">
+      <div className="text-[2rem] font-bold text-center" style={{ fontFamily: "'Cormorant Garamond', serif" }}>
+        COME PUO&apos; AIUTARTI UNA BUSINESS COACH
+      </div>
+      <h1 className="absolute mt-[2rem] text-5xl font-bold text-pink-800 italic" style={{ fontFamily: "'Dancing Script', cursive" }}>
         Ecco come posso supportarti io
       </h1>
+
       <div className="flex mt-[4rem] mx-[2rem] space-x-4">
         <Card imageSrc={img1} description="TI AIUTO A RAFFORZARE LA TUA AUTOSTIMA" />
         <Card imageSrc={img2} description="TI AIUTO A SVILUPPARE CAPACITA' DI ASCOLTO E DI COMUNICAZIONE EFFICACE" />

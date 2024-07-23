@@ -1,0 +1,6 @@
+.lens-shadow {
+  /* box-shadow: 0 10px 20px rgba(0, 0, 0, 0.75); */
+  /* border-radius: 50%; */
+  /* border: 5px solid rgba(255, 255, 255, 0.5); */
+  transform: scale(1.5); /* Aumenta la scala dell'immagine */
+}
