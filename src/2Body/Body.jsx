@@ -1,7 +1,9 @@
 import React, { useEffect } from 'react';
-import ImageMain from '../../public/assets/ImageMain.png';
-import ImageRagazza from '../../public/assets/ImageRagazza.png';
 import SubBody1 from './SubBody1/SubBody1';
+import SubBody2 from './SubBody2/SubBody2';
+import SubBody3 from './SubBody3/SubBody3';
+import ImageMain from '/assets/ImageMain.png';
+import ImageRagazza from '/assets/ImageRagazza.png';
 
 const Body = () => {
   useEffect(() => {
@@ -25,6 +27,8 @@ const Body = () => {
         </div>
       </div>
       <SubBody1 />
+      <SubBody2 />
+      <SubBody3 />
     </>
   );
 };
