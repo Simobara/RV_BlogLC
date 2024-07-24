@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import './Body.css';
+import Contatti from './External/Contatti/contatti';
 import SubBody1 from './SubBody1/SubBody1';
 import SubBody2 from './SubBody2/SubBody2';
 import SubBody3 from './SubBody3/SubBody3';
@@ -20,7 +21,7 @@ const Body = () => {
 
   return (
     <>
-      <div className="relative">
+      <div id="top" className="relative">
         <div className=" w-full max-h-[35rem] flex-grow overflow-y-hidden bg-cover bg-center bg-no-repeat" style={{ backgroundImage: `url(${ImageMain})`, height: '150vh' }}>
           {/* Puoi aggiungere il contenuto del corpo qui */}
           <div className="relative p-8 text-white w-100% flex">
@@ -32,14 +33,22 @@ const Body = () => {
             </div>
           </div>
         </div>
-        <SubBody1 />
-        <SubBody2 />
-        <SubBody3 />
+        <div id="subbody1">
+          <SubBody1 />
+        </div>
+        <div id="subbody2">
+          <SubBody2 />
+        </div>
+        <div id="subbody3">
+          <SubBody3 />
+        </div>
         <SubBody4 />
-
-        <div className="fixed top-[55%] left-[85%] w-[10rem] lens-shadow" onMouseEnter={() => setHovered(true)} onMouseLeave={() => setHovered(false)}>
+        <div id="contatti">
+          <Contatti />
+        </div>
+        <div className="fixed top-[75%] right-[8px] w-[8rem] lens-shadow" onMouseEnter={() => setHovered(true)} onMouseLeave={() => setHovered(false)}>
           <a href="https://wa.me/393342325244" target="_blank" rel="noopener noreferrer">
-            <img src={hovered ? ImgWApp2 : ImgWApp} alt="Main" className={`h-[9rem] object-cover rounded-full transition-transform duration-[1500ms] ease-in-out transform ${hovered ? 'scale-150' : 'scale-100'}`} />
+            <img src={hovered ? ImgWApp2 : ImgWApp} alt="WApp" className={`h-[9rem] object-cover rounded-full transition-transform duration-[1500ms] ease-out transform ${hovered ? '' : 'scale-100'}`} />
           </a>
         </div>
       </div>

@@ -10,7 +10,7 @@ const SubBody4 = () => {
   }, []);
 
   return (
-    <div className="relative bg-white text-black w-full h-[35rem] flex flex-col items-center justify-start pt-4 mt-[4rem]">
+    <div className="relative bg-white text-black w-full h-[25rem] flex flex-col items-center justify-start pt-4 mt-[4rem]">
       <div className="text-[2rem] font-bold text-center" style={{ fontFamily: "'Cormorant Garamond', serif" }}>
         LE MIE CREDENZIALI DI BUSINESS COACH
       </div>
