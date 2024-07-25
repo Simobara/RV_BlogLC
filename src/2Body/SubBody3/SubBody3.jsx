@@ -20,7 +20,7 @@ const SubBody3 = () => {
   }, []);
 
   return (
-    <div className="relative bg-white text-black w-full h-[45rem] flex flex-col items-center justify-start pt-4 mt-[4rem]">
+    <div className="relative bg-white text-black w-full h-[50rem] flex flex-col items-center justify-start pt-4 mt-[4rem]">
       <div className="text-[2rem] font-bold text-center" style={{ fontFamily: "'Cormorant Garamond', serif" }}>
         COME PUO&apos; AIUTARTI UNA BUSINESS COACH
       </div>
@@ -36,10 +36,10 @@ const SubBody3 = () => {
         <Card imageSrc={img5} description="TI AIUTO A SVILUPPARE LE TUE COMPETENZE DI INTELLIGENZA EMOTIVA E DI LEADERSHIP" />
       </div>
 
-      <div className="bg-red-900 mt-8 p-8 text-3xl font-bold rounded-lg relative flex items-center text-white justify-center mx-4 mb-[40%] custom-shadow" style={{ fontFamily: "'Cormorant Garamond', serif" }}>
+      <div className="bg-pink-900 mt-8 p-8 text-3xl font-bold rounded-lg relative flex items-center text-white justify-center mx-[4rem] mb-[40%] custom-shadow" style={{ fontFamily: "'Dancing Script', cursive" }}>
         <span className="text-6xl absolute top-0 left-0 transform -translate-y-6 -translate-x-6 text-black">&ldquo;</span>
         <p className="text-center">
-          Procrastinare è l&apos;arte di stare al passo con ciò che è successo ieri, per evitare il domani
+          <span className="text-white">Procastinare</span> è l&apos;arte di stare al passo con ciò che è successo ieri, per evitare il domani
           <br />
           <span className="text-lg mt-4 block text-right text-green-500">- Wayne Dyer -</span>
         </p>

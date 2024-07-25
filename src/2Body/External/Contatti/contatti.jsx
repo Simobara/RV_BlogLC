@@ -84,24 +84,26 @@ const Contatti = () => {
   return (
     <div className="w-full h-[40rem] flex overflow-hidden">
       <div className="w-1/2 bg-pink-900 text-white flex flex-col items-start justify-start p-10">
-        <h2 className="text-3xl mb-4">Contatti</h2>
+        <div className="text-center items-center justify-center">
+          <h2 className="text-3xl mb-4">EMAIL</h2>
+        </div>
         {/* <img src={LogoMain} alt="Logo" className="h-32 mb-8" /> */}
         <div className="flex flex-col">
-          <p className="text-xl mb-[1rem]">Rosy Cosco</p>
+          <p className="text-xl mb-[1rem]">Lara Coffari</p>
           <p className="text-sm mb-[4rem]">EMPOWERMENT, PERFORMANCE & BUSINESS COACH</p>
-          <p className="mb-[4rem]">Procrastinare è l&apos;arte di stare al passo con ciò che è successo ieri, per evitare il domani" -Wayne Dyer-</p>
-          <p className="mb-[1rem] flex items-center">
+          <p className="mb-[4rem] text-green-500 font-semibold">"Procrastinare è l&apos;arte di stare al passo con ciò che è successo ieri, per evitare il domani" -Wayne Dyer-</p>
+          <p className="mb-[1rem] flex items-center text-gray-400">
             <i className="fas fa-phone-alt mr-2"></i>
             +39 340 76 330 65
           </p>
-          <p className="mt-2">
+          <p className="mt-2 text-gray-400 black font-bold">
             <i className="fas fa-envelope mr-2"></i>info@laracoffari.it
           </p>
         </div>
 
-        <div className="flex items-center mt-4 ">
-          <p className="mb-2 mr-[4rem]">Seguimi su:</p>
-          <div className="flex space-x-4">
+        <div className="flex mt-4 text-center justify-center items-center">
+          <p className="mb-2 mr-[1rem]">Seguimi su:</p>
+          <div className="flex space-x-4 ">
             <a href="https://www.instagram.com/laracoffari/" target="_blank" rel="noopener noreferrer">
               <i className="fab fa-instagram text-white text-2xl"></i>
             </a>

@@ -38,11 +38,11 @@ const Header = () => {
               <img src={LogoMain} alt="Logo" className="h-[3rem]" />
               <div className="w-[25rem] ml-[0.5rem]">
                 <h1 className="w-full text-3xl font-bold text-pink-900" style={{ fontFamily: "'Cormorant Garamond', serif", letterSpacing: '0.78rem' }}>
-                  ROSY COSCO
+                  LARA COFFARI
                 </h1>
 
-                <p className="text-gray-600 text-xs" style={{ letterSpacing: '-0.04rem' }}>
-                  EMPOWERMENT, PERFORMANCE & BUSINESS COACHING
+                <p className="text-gray-600 text-xs" style={{ letterSpacing: '0.9rem' }}>
+                  BUSINESS COACHING
                 </p>
               </div>
             </div>
