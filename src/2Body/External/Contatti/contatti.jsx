@@ -1,5 +1,6 @@
 import axios from 'axios';
 import React, { useCallback, useEffect, useState } from 'react';
+import LogoMain1 from '../../../../public/assets/LogoMain1.png';
 import ModalCP from '../ModalCookPolicy/modalCP';
 import CookiePolicyText from '../ModalCookPolicy/text';
 import ModalPP from '../ModalPrivPolicy/modalPP';
@@ -83,15 +84,17 @@ const Contatti = () => {
 
   return (
     <div className="w-full h-[40rem] flex overflow-hidden">
-      <div className="w-1/2 bg-pink-900 text-white flex flex-col items-start justify-start p-10">
+      <div className="w-1/2 bg-pink-900 text-white flex flex-col items-start justify-start p-5">
         <div className="text-center items-center justify-center">
-          <h2 className="text-3xl mb-4">EMAIL</h2>
+          <h2 className="text-3xl mb-4">
+            <i className="fas fa-envelope mr-2" />
+          </h2>
         </div>
         {/* <img src={LogoMain} alt="Logo" className="h-32 mb-8" /> */}
         <div className="flex flex-col">
           <p className="text-xl mb-[1rem]">Lara Coffari</p>
           <p className="text-sm mb-[4rem]">EMPOWERMENT, PERFORMANCE & BUSINESS COACH</p>
-          <p className="mb-[4rem] text-green-500 font-semibold">"Procrastinare è l&apos;arte di stare al passo con ciò che è successo ieri, per evitare il domani" -Wayne Dyer-</p>
+          <p className="mb-[4rem] text-green-500 font-semibold">&quot;Procrastinare è l&apos;arte di stare al passo con ciò che è successo ieri, per evitare il domani&quot; -Wayne Dyer-</p>
           <p className="mb-[1rem] flex items-center text-gray-400">
             <i className="fas fa-phone-alt mr-2"></i>
             +39 340 76 330 65
@@ -125,8 +128,9 @@ const Contatti = () => {
           </a>
         </div>
       </div>
-      <div className="w-1/2 bg-white p-10 flex items-center justify-center">
-        <form onSubmit={handleSubmit} className="w-full max-w-lg">
+      <div className="w-1/2 bg-white p-10 flex items-center justify-center relative bg-no-repeat bg-center bg-cover" style={{ backgroundImage: `url(${LogoMain1})`, backgroundSize: '280% 222%', backgroundPosition: 'center -27rem' }}>
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black opacity-30"></div>
+        <form onSubmit={handleSubmit} className="w-full max-w-lg relative z-10">
           <div className="mb-4">
             <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="nome">
               Nome *
@@ -152,9 +156,9 @@ const Contatti = () => {
             </label>
             <textarea name="messaggio" value={formData.messaggio} onChange={handleChange} className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" required />
           </div>
-          <div className="mb-4">
+          <div className="mb-4 bg-white">
             <input type="checkbox" name="privacyPolicy" checked={formData.privacyPolicy} onChange={handleChange} className="mr-2 leading-tight" required />
-            <span className="text-gray-700 text-sm">
+            <span className="text-gray-700 text-sm z-10">
               Ho letto l&apos; informativa sulla
               <a href="/privacy-policy" className="text-pink-900">
                 {' '}
