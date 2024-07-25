@@ -27,7 +27,7 @@ const Body = () => {
           <div className="relative p-8 text-white w-100% flex">
             <img src={ImageRagazza} alt="Main" className="sm:h-[25rem] md:h-[25rem] md:ml-[-1rem] lg:h-[30rem] ml-[-1rem] h-[20rem] object-cover    " />
             <div className="bg-transparent ml-[3rem] w-[50%] flex items-center justify-center p-4 ">
-              <p className="text-black text-[2rem] sm:text-[2rem] sm:ml-[-3rem] md:text-[2.5rem] md:ml-[0.7rem] lg:text-[3rem] ml-[-3rem] xs:hidden" style={{ fontFamily: "'Dancing Script', cursive" }}>
+              <p className="text-black text-[2rem] sm:text-[2rem] sm:ml-[-3rem] md:text-[2rem] md:ml-[0.7rem] lg:text-[3rem] ml-[-3rem] xs:hidden" style={{ fontFamily: "'Dancing Script', cursive" }}>
                 La Business Coach pronta a far sbocciare il tuo potenziale <span className="smd:block">in modo etico, inclusivo e sostenibile </span>
               </p>
             </div>
@@ -49,7 +49,7 @@ const Body = () => {
           <Contatti />
         </div>
         <div className="fixed top-[75%] right-[8px] w-[8rem] lens-shadow" onMouseEnter={() => setHovered(true)} onMouseLeave={() => setHovered(false)}>
-          <a href="https://wa.me/393342325244" target="_blank" rel="noopener noreferrer">
+          <a href="https://wa.me/00393407633065" target="_blank" rel="noopener noreferrer">
             <img src={hovered ? ImgWApp2 : ImgWApp} alt="WApp" className={`h-[9rem] object-cover rounded-full transition-transform duration-[1500ms] ease-out transform ${hovered ? '' : 'scale-100'}`} />
           </a>
         </div>

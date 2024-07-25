@@ -128,8 +128,8 @@ const Contatti = () => {
           </a>
         </div>
       </div>
-      <div className="w-1/2 bg-white p-10 flex items-center justify-center relative bg-no-repeat bg-center bg-cover" style={{ backgroundImage: `url(${LogoMain1})`, backgroundSize: '280% 222%', backgroundPosition: 'center -27rem' }}>
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black opacity-30"></div>
+      <div className="w-1/2 bg-white p-10 flex items-center justify-center relative bg-no-repeat bg-center bg-cover" style={{ backgroundImage: `url(${LogoMain1})`, backgroundSize: '280% 220%', backgroundPosition: 'center -27rem' }}>
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent to-gray-800 opacity-50"></div>
         <form onSubmit={handleSubmit} className="w-full max-w-lg relative z-10">
           <div className="mb-4">
             <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="nome">
