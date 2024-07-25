@@ -25,7 +25,7 @@ const SubBody3 = () => {
         COME PUO&apos; AIUTARTI UNA BUSINESS COACH
       </div>
       <h1 className="absolute mt-[2rem] text-5xl font-bold text-pink-800 italic" style={{ fontFamily: "'Dancing Script', cursive" }}>
-        Ecco come posso supportarti io
+        Ecco come posso supportarti io !
       </h1>
 
       <div className="flex mt-[4rem] mx-[2rem] space-x-4">

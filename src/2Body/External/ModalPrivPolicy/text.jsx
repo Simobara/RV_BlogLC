@@ -1,7 +1,7 @@
 import React from 'react';
 
 const PrivacyPolicyText = () => (
-  <div>
+  <div className="h-[50rem] md:h-[40rem] overflow-y-auto md:overflow-y-scroll">
     <h2 className="text-lg font-semibold mb-4">Privacy Policy</h2>
     <p>
       L’indirizzo del nostro sito web è: https://laracoffari.it. Informativa sulla privacy Ultimo aggiornamento 17-lug-2023 Data di entrata in vigore 17-lug-2023 La presente Informativa sulla privacy descrive le politiche di Lara Coffari, Via Guido

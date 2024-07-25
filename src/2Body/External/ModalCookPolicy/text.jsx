@@ -1,7 +1,7 @@
 import React from 'react';
 
 const CookiePolicyText = () => (
-  <div>
+  <div className="h-[50rem] md:h-[40rem] overflow-y-auto md:overflow-y-scroll">
     <h2 className="text-lg font-semibold mb-4">Cookie Policy</h2>
     <p>
       L’indirizzo del nostro sito web è: https://laracoffari.it. Politica sui cookie Data di entrata in vigore: 17-lug-2023 Ultimo aggiornamento: 17-lug-2023 Cosa sono i cookie? La presente Informativa sui cookie spiega cosa sono i cookie e come li
