@@ -56,7 +56,7 @@ const Header = () => {
               to="subbody2"
               smooth={true}
               duration={500}
-              offset={-100}
+              offset={-150}
               className="cursor-pointer text-black hover:text-pink-900 text-xs tracking-[0.2rem] relative pb-5 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-full after:h-1.5 after:bg-transparent hover:after:bg-[#be123c] after:transition-colors"
             >
               COACHING

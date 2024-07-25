@@ -16,11 +16,11 @@ function Card({ imageSrc, title, description, buttonText }) {
       </div>
       <div className="p-4">
         <h2 className="text-2xl font-bold mb-2 text-pink-800 text-center" style={{ fontFamily: "'Cormorant Garamond', serif" }}>
-          {title}
+          {title.toUpperCase()}
         </h2>
-        <p className="text-black mb-[1rem]">{description}</p>
-        <div className="mt-[2rem] h-20 ">
-          <button className="absolute left-1/2 transform -translate-x-1/2 bg-pink-800 text-white p-[1rem] text-xs rounded-lg" style={{ bottom: '1rem', marginBottom: '1rem' }}>
+        <p className="text-black mb-[1rem] max-h-[14rem] overflow-y-auto ">{description}</p>
+        <div className="mt-[2rem] h-[2rem]">
+          <button className="absolute w-[50%] left-1/2 transform -translate-x-1/2 bg-pink-800 text-white p-[.5rem] text-xs rounded-lg" style={{ bottom: '1rem', marginBottom: '1rem' }}>
             {buttonText}
           </button>
         </div>

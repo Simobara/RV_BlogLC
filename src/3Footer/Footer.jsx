@@ -7,7 +7,7 @@ const Footer = () => {
     <footer className="bg-black text-white py-8 px-4">
       <div className="container mx-auto flex flex-col md:flex-row justify-start"></div>
       <div className="container mx-auto mt-8 text-center md:text-left">
-        <p className="text-sm">Copyright {currentYear} Lara Coffari P. IVA 123 456 789 12</p>
+        <p className="text-sm">Copyright © {currentYear} Tutti i diritti riservati Lara Coffari- Professional Organizer Professione regolamentata dalla Legge 4/2013- Prestazioni ai sensi dell’ex art.2222 del C.C. </p>
         <p className="text-sm">
           Made by
           <span role="img" aria-label="sparkles">

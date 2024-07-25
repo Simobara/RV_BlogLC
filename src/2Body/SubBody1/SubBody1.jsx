@@ -19,12 +19,12 @@ const SubBody1 = () => {
               Welcome!
             </h1>
             <p className="mb-4 text-justify text-md">
-              Sono Rosy, <strong>Business Coach, Career Coach, Consulente di Carriera, Formatrice e Assessor in Intelligenza Emotiva</strong>, specializzata in empowerment individuale, femminile e organizzativo.
+              Sono Lara, <strong>Business Coach, Consulente di Carriera, Formatrice e Assessor in Intelligenza Emotiva</strong>, specializzata in empowerment individuale, femminile e organizzativo.
             </p>
             <p className="mb-4 text-justify text-md">Nel mio ruolo di Business Coach professionista, sono qui per aiutarti a liberare il tuo potenziale attraverso percorsi di trasformazione su misura.</p>
             <p className="mb-4 text-justify text-md">
-              Se sei una professionista desiderosa di dare una svolta alla tua carriera o un’azienda che cerca di potenziare il proprio team, sono qui per te. Insieme, possiamo creare una roadmap chiara verso il successo, superando ostacoli e
-              realizzando i tuoi obiettivi con determinazione e consapevolezza.
+              Mi occupo di gestione del tempo, mi piace definirmi un’allenatrice dell’organizzazione. Work&life balance per me è uno stile di vita e aiuto liberi professionisti e aziende a beneficiarne. Sei multipotenziale? Ti annoi a fare una cosa
+              sola per volta, hai tante passioni e non vuoi rinunciare a nessuna? Sappi che non devi farlo, anche io sono come te e ti capisco. Ho acquisito le tecniche per gestire al meglio ciò che inizialmente sembrava caos, ma ora è luce.
             </p>
           </div>
           <button className="bg-teal-700 text-white px-6 py-2 rounded-lg">SCOPRI DI PIÙ</button>

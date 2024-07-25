@@ -1,6 +1,9 @@
-import axios from 'axios'; // Assicurati di installare axios: npm install axios
-import React, { useEffect, useState } from 'react';
-import LogoMain from '/assets/LogoMain.png';
+import axios from 'axios';
+import React, { useCallback, useEffect, useState } from 'react';
+import ModalCP from '../ModalCookPolicy/modalCP';
+import CookiePolicyText from '../ModalCookPolicy/text';
+import ModalPP from '../ModalPrivPolicy/modalPP';
+import PrivacyPolicyText from '../ModalPrivPolicy/text';
 
 const Contatti = () => {
   const [formData, setFormData] = useState({
@@ -12,11 +15,9 @@ const Contatti = () => {
   });
 
   const [isFormValid, setIsFormValid] = useState(false);
-  const [submitStatus, setSubmitStatus] = useState(null); // Stato per il messaggio di invio
-
-  useEffect(() => {
-    validateForm(formData);
-  }, [formData]);
+  const [submitStatus, setSubmitStatus] = useState(null);
+  const [showModalCP, setShowModalCP] = useState(false);
+  const [showModalPP, setShowModalPP] = useState(false);
 
   const handleChange = (e) => {
     const { name, value, type, checked } = e.target;
@@ -31,14 +32,14 @@ const Contatti = () => {
     return re.test(String(email).toLowerCase());
   };
 
-  const validateForm = (data) => {
+  const validateForm = useCallback((data) => {
     const { nome, cognome, email, messaggio, privacyPolicy } = data;
     if (nome && cognome && email && validateEmail(email) && messaggio && privacyPolicy) {
       setIsFormValid(true);
     } else {
       setIsFormValid(false);
     }
-  };
+  }, []);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -59,23 +60,65 @@ const Contatti = () => {
     }
   };
 
+  useEffect(() => {
+    validateForm(formData);
+  }, [formData, validateForm]);
+
+  // Ricarica FontAwesome icons dopo che il componente è montato
+  useEffect(() => {
+    const loadFontAwesome = () => {
+      const script = document.createElement('script');
+      script.src = 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js';
+      script.async = true;
+      document.body.appendChild(script);
+    };
+    loadFontAwesome();
+  }, []);
+
+  const handleOpenModalCP = () => setShowModalCP(true);
+  const handleCloseModalCP = () => setShowModalCP(false);
+
+  const handleOpenModalPP = () => setShowModalPP(true);
+  const handleCloseModalPP = () => setShowModalPP(false);
+
   return (
     <div className="w-full h-[40rem] flex overflow-hidden">
-      <div className="w-1/2 bg-pink-900 text-white flex flex-col items-center justify-center p-10">
-        <img src={LogoMain} alt="Logo" className="h-32 mb-8" />
+      <div className="w-1/2 bg-pink-900 text-white flex flex-col items-start justify-start p-10">
         <h2 className="text-3xl mb-4">Contatti</h2>
-        <p className="text-xl mb-4">Rosy Cosco</p>
-        <p className="text-sm mb-4">EMPOWERMENT, PERFORMANCE & BUSINESS COACH</p>
-        <p className="text-center mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla accumsan, metus ultrices eleifend gravida, nulla nunc varius lectus, nec rutrum justo nibh eu lectus.</p>
-        <p className="text-center">Telefono: +39 123 456 789</p>
-        <p className="mt-2">
-          <i className="fas fa-envelope mr-2"></i>info@rosycosco.com
-        </p>
-        <div className="flex space-x-2 mt-2">
-          <a href="/privacy-policy" className="text-white bg-green-500 px-2 py-1 rounded">
+        {/* <img src={LogoMain} alt="Logo" className="h-32 mb-8" /> */}
+        <div className="flex flex-col">
+          <p className="text-xl mb-[1rem]">Rosy Cosco</p>
+          <p className="text-sm mb-[4rem]">EMPOWERMENT, PERFORMANCE & BUSINESS COACH</p>
+          <p className="mb-[4rem]">Procrastinare è l&apos;arte di stare al passo con ciò che è successo ieri, per evitare il domani" -Wayne Dyer-</p>
+          <p className="mb-[1rem] flex items-center">
+            <i className="fas fa-phone-alt mr-2"></i>
+            +39 340 76 330 65
+          </p>
+          <p className="mt-2">
+            <i className="fas fa-envelope mr-2"></i>info@laracoffari.it
+          </p>
+        </div>
+
+        <div className="flex items-center mt-4 ">
+          <p className="mb-2 mr-[4rem]">Seguimi su:</p>
+          <div className="flex space-x-4">
+            <a href="https://www.instagram.com/laracoffari/" target="_blank" rel="noopener noreferrer">
+              <i className="fab fa-instagram text-white text-2xl"></i>
+            </a>
+            <a href="https://www.facebook.com/lalaralab/" target="_blank" rel="noopener noreferrer">
+              <i className="fab fa-facebook text-white text-2xl"></i>
+            </a>
+            <a href="https://www.tiktok.com/login?redirect_url=https%3A%2F%2Fwww.tiktok.com%2F%40_laralab_&lang=en&enter_method=mandatory" target="_blank" rel="noopener noreferrer">
+              <i className="fab fa-tiktok text-white text-2xl"></i>
+            </a>
+          </div>
+        </div>
+
+        <div className="flex space-x-2 mt-[20%]">
+          <a onClick={handleOpenModalPP} className="text-white bg-green-500 px-2 py-1 rounded cursor-pointer">
             Privacy Policy
           </a>
-          <a href="/cookie-policy" className="text-white bg-green-500 px-2 py-1 rounded">
+          <a onClick={handleOpenModalCP} className="text-white bg-green-500 px-2 py-1 rounded cursor-pointer">
             Cookie Policy
           </a>
         </div>
@@ -127,6 +170,14 @@ const Contatti = () => {
           </div>
         </form>
       </div>
+
+      <ModalCP show={showModalCP} onClose={handleCloseModalCP}>
+        <CookiePolicyText />
+      </ModalCP>
+
+      <ModalPP show={showModalPP} onClose={handleCloseModalPP}>
+        <PrivacyPolicyText />
+      </ModalPP>
     </div>
   );
 };

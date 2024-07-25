@@ -16,6 +16,6 @@ if (result.error) {
   console.error('Errore nel caricamento del file .env', result.error);
 } else {
   console.log("Variabili d'ambiente caricate con successo");
-  console.log('EMAIL_USER:', process.env.EMAIL_USER);
-  console.log('EMAIL_PASS:', process.env.EMAIL_PASS);
+  console.log('EMAIL_USER:', process?.env.EMAIL_USER);
+  console.log('EMAIL_PASS:', process?.env.EMAIL_PASS);
 }

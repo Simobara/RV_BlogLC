@@ -19,7 +19,7 @@ const SubBody4 = () => {
       </h1>
 
       <div className="relative flex mt-[4rem] items-center justify-center">
-        <p className="absolute mt-[4rem] text-justify w-[60rem] mx-[2rem]">
+        <p className="w-[80%] mt-[4rem] text-justify mx-[2rem] md:mx-[8rem]">
           Ti assicuro un servizio conforme agli elevati standard di qualita&apos; ed etica. Le mie credenziali garantiscono un approccio professionale e competente al coaching, ponendo al centro dell&apos; attenzione il tuo benessere e la tua
           crescita personale e professionale. Le mie qualifiche sono la tua garanzia di un percorso di <strong>coaching efficace e trasformativo.</strong>
         </p>
