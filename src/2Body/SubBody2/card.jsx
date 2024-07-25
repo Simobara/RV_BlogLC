@@ -10,7 +10,7 @@ function Card({ imageSrc, title, description, buttonText }) {
   }, []);
 
   return (
-    <div className="bg-gray-100 p-6 rounded-lg shadow-lg w-1/3 relative min-w-[12vw] overflow-hidden ">
+    <div className="bg-gray-100 p-6 rounded-lg shadow-lg w-1/3 relative min-w-[5rem] overflow-hidden ">
       <div className="overflow-hidden rounded-t-lg">
         <img src={imageSrc} alt="Card Image" className="w-full h-48 object-cover rounded-t-lg transform transition-transform duration-500 hover:scale-110" />
       </div>

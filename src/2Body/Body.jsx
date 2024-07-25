@@ -25,10 +25,10 @@ const Body = () => {
         <div className=" w-full max-h-[35rem] flex-grow overflow-y-hidden bg-cover bg-center bg-no-repeat" style={{ backgroundImage: `url(${ImageMain})`, height: '150vh' }}>
           {/* Puoi aggiungere il contenuto del corpo qui */}
           <div className="relative p-8 text-white w-100% flex">
-            <img src={ImageRagazza} alt="Main" className="h-[33rem] object-cover ml-[10%]" />
-            <div className="bg-transparent ml-[3rem] w-[33rem] flex items-center justify-center p-4">
-              <p className="text-black text-[3rem]" style={{ fontFamily: "'Dancing Script', cursive" }}>
-                La Business Coach pronta a far sbocciare il tuo potenziale in modo etico, inclusivo e sostenibile
+            <img src={ImageRagazza} alt="Main" className="sm:h-[25rem] md:h-[25rem] md:ml-[-1rem] lg:h-[30rem] ml-[-1rem] h-[20rem] object-cover    " />
+            <div className="bg-transparent ml-[3rem] w-[50%] flex items-center justify-center p-4 ">
+              <p className="text-black text-[2rem] sm:text-[2rem] sm:ml-[-3rem] md:text-[2.5rem] md:ml-[0.7rem] lg:text-[3rem] ml-[-3rem] xs:hidden" style={{ fontFamily: "'Dancing Script', cursive" }}>
+                La Business Coach pronta a far sbocciare il tuo potenziale <span className="smd:block">in modo etico, inclusivo e sostenibile </span>
               </p>
             </div>
           </div>
@@ -42,7 +42,9 @@ const Body = () => {
         <div id="subbody3">
           <SubBody3 />
         </div>
-        <SubBody4 />
+        <div id="subbody4">
+          <SubBody4 />
+        </div>
         <div id="contatti">
           <Contatti />
         </div>

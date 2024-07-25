@@ -11,9 +11,9 @@ const SubBody2 = () => {
       <div className="flex justify-center space-x-4 mx-[2rem]">
         <Card
           imageSrc={img1}
-          title="Libera professione o freelance"
+          title="Libera professione"
           description="Lavorare in armonia, senza correre dietro a scadenze ed impegni. Raggiungere gli obiettivi senza sentire il tempo col fiato sul collo. Rimanere concentrati senza perdere il focus e non procrastinare."
-          buttonText="SCOPRI DI PIÙ"
+          buttonText="SCOPRI CON ME"
         />
         <Card
           imageSrc={img2}
@@ -25,14 +25,13 @@ Vuoi migliorare e semplificare la gestione della casa e le attività quotidiane?
         />
         <Card
           imageSrc={img3}
-          title="ASSESSMENT DI INTELLIGENZA EMOTIVA"
+          title="INTELLIGENZA EMOTIVA"
           description="La gestione di un’azienda ha a che fare con tante variabili. Tempo, flussi di lavoro, dipendenti, progetti, commesse, clienti, fornitori.
 
 Vuoi imparare a gestire il tuo tempo diminuendo le distrazioni e semplificando la gestione delle attività quotidiane? Senza ansia e stress per creare un ambiente di lavoro più produttivo per te e le persone che lavorano con te e per te."
           buttonText="CREIAMO INSIEME"
         />
       </div>
-      
     </div>
   );
 };
