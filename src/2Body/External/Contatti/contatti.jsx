@@ -1,10 +1,10 @@
 import axios from 'axios';
 import React, { useCallback, useEffect, useState } from 'react';
-import LogoMain1 from '../../../../public/assets/LogoMain1.png';
 import ModalCP from '../ModalCookPolicy/modalCP';
 import CookiePolicyText from '../ModalCookPolicy/text';
 import ModalPP from '../ModalPrivPolicy/modalPP';
 import PrivacyPolicyText from '../ModalPrivPolicy/text';
+import LogoMain1 from '/assets/LogoMain1.png';
 
 const Contatti = () => {
   const [formData, setFormData] = useState({
@@ -132,26 +132,26 @@ const Contatti = () => {
         <div className="absolute inset-0 bg-gradient-to-b from-transparent to-gray-800 opacity-50"></div>
         <form onSubmit={handleSubmit} className="w-full max-w-lg relative z-10">
           <div className="mb-4">
-            <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="nome">
+            <label className="block  text-sm font-bold mb-2 ml-[10%] text-pink-500" htmlFor="nome">
               Nome *
             </label>
             <input type="text" name="nome" value={formData.nome} onChange={handleChange} className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" required />
           </div>
           <div className="mb-4">
-            <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="cognome">
+            <label className="block  text-sm font-bold mb-2 ml-[10%] text-pink-500" htmlFor="cognome">
               Cognome *
             </label>
             <input type="text" name="cognome" value={formData.cognome} onChange={handleChange} className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" required />
           </div>
           <div className="mb-4">
-            <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="email">
+            <label className="block  text-sm font-bold mb-2 ml-[10%] text-pink-500" htmlFor="email">
               Email *
             </label>
             <input type="email" name="email" value={formData.email} onChange={handleChange} className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" required />
             {!validateEmail(formData.email) && formData.email && <p className="text-red-500 text-xs italic">Indirizzo email non valido</p>}
           </div>
           <div className="mb-4">
-            <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="messaggio">
+            <label className="block text-sm font-bold mb-2 ml-[10%] text-pink-500" htmlFor="messaggio">
               Messaggio *
             </label>
             <textarea name="messaggio" value={formData.messaggio} onChange={handleChange} className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" required />
@@ -170,7 +170,7 @@ const Contatti = () => {
           {submitStatus === 'success' && <p className="text-green-500 text-xs italic">Messaggio inviato correttamente!</p>}
           {submitStatus === 'error' && <p className="text-red-500 text-xs italic">Invio del messaggio fallito. Riprova più tardi.</p>}
           <div className="flex items-center justify-between">
-            <button type="submit" className={`bg-pink-900 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline ${!isFormValid ? 'opacity-50 cursor-not-allowed' : 'hover:bg-pink-700'}`} disabled={!isFormValid}>
+            <button type="submit" className={`bg-pink-700 text-white ml-[10%] font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline ${!isFormValid ? 'opacity-50 cursor-not-allowed' : 'hover:bg-pink-700'}`} disabled={!isFormValid}>
               Invia
             </button>
           </div>
