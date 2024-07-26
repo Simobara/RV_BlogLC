@@ -1,11 +1,18 @@
-import React, { useEffect, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
+import Modal from 'react-modal';
 import { Link as ScrollLink } from 'react-scroll';
+import LoginPage from '../components/loginPage';
+import { LoginContext } from '../context/loginContext';
 import './Header.css';
 import LogoMain from '/assets/LogoMain1.png';
+
+Modal.setAppElement('#root');
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [activeSection, setActiveSection] = useState('');
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const { isLoggedIn, login, logout } = useContext(LoginContext);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -50,6 +57,23 @@ const Header = () => {
     setActiveSection(to);
   };
 
+  const openModal = () => {
+    setIsModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setIsModalOpen(false);
+  };
+
+  const handleLogin = (username, password) => {
+    if (login(username, password)) {
+      console.log('ok');
+      closeModal();
+    } else {
+      console.log('Nome utente o password errati');
+    }
+  };
+
   return (
     <div className="w-[100vw] h-[20vh] flex-shrink-0">
       {!isScrolled && <div className="bg-pink-900 text-gray-200 text-center item-center justify-center py-[1rem] font-light text-sm">MASTERCLASS INTELLIGENZA EMOTIVA & LEADERSHIP</div>}
@@ -68,7 +92,7 @@ const Header = () => {
               </div>
             </div>
           </ScrollLink>
-          <nav className="flex space-x-8">
+          <nav className="flex space-x-8 mr-[8rem]">
             <ScrollLink
               to="subbody2"
               smooth={true}
@@ -117,13 +141,32 @@ const Header = () => {
             >
               EMAIL
             </ScrollLink>
-            <a
-              href="#"
-              className="text-black hover:text-pink-900 text-xs tracking-[0.2rem] relative pb-5 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-full after:h-1.5 after:bg-transparent hover:after:bg-[#be123c] after:transition-colors"
-            ></a>
+            {isLoggedIn ? (
+              <button
+                onClick={logout}
+                className="cursor-pointer text-black hover:text-pink-900 text-xs tracking-[0.2rem] relative pb-5 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-full after:h-1.5 after:bg-transparent hover:after:bg-[#be123c] after:transition-colors"
+              >
+                LOGOUT
+              </button>
+            ) : (
+              <button
+                onClick={openModal}
+                className="cursor-pointer text-black hover:text-pink-900 text-xs tracking-[0.2rem] relative pb-5 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-full after:h-1.5 after:bg-transparent hover:after:bg-[#be123c] after:transition-colors"
+              >
+                LOGIN
+              </button>
+            )}
           </nav>
         </div>
       </div>
+      <Modal isOpen={isModalOpen} onRequestClose={closeModal} contentLabel="Area Riservata Modal">
+        <div className="relative">
+          <button onClick={closeModal} className="absolute top-2 right-2 text-red-500 hover:text-pink-500 text-2xl bg-transparent border-none cursor-pointer">
+            ✖
+          </button>
+          <LoginPage onLogin={handleLogin} onClose={closeModal} />
+        </div>
+      </Modal>
     </div>
   );
 };
