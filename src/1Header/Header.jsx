@@ -59,10 +59,12 @@ const Header = () => {
 
   const openModal = () => {
     setIsModalOpen(true);
+    document.body.style.overflow = 'hidden'; // Disable scroll
   };
 
   const closeModal = () => {
     setIsModalOpen(false);
+    document.body.style.overflow = 'auto'; // Enable scroll
   };
 
   const handleLogin = (username, password) => {
@@ -144,7 +146,7 @@ const Header = () => {
             {isLoggedIn ? (
               <button
                 onClick={logout}
-                className="cursor-pointer text-black hover:text-pink-900 text-xs tracking-[0.2rem] relative pb-5 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-full after:h-1.5 after:bg-transparent hover:after:bg-[#be123c] after:transition-colors"
+                className="cursor-pointer text-red-900 font-black hover:text-pink-900 text-xs tracking-[0.2rem] relative pb-5 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-full after:h-1.5 after:bg-transparent hover:after:bg-[#be123c] after:transition-colors"
               >
                 LOGOUT
               </button>
@@ -159,13 +161,8 @@ const Header = () => {
           </nav>
         </div>
       </div>
-      <Modal isOpen={isModalOpen} onRequestClose={closeModal} contentLabel="Area Riservata Modal">
-        <div className="relative">
-          <button onClick={closeModal} className="absolute top-2 right-2 text-red-500 hover:text-pink-500 text-2xl bg-transparent border-none cursor-pointer">
-            ✖
-          </button>
-          <LoginPage onLogin={handleLogin} onClose={closeModal} />
-        </div>
+      <Modal isOpen={isModalOpen} onRequestClose={closeModal} contentLabel="Area Riservata Modal" className="flex items-center justify-center fixed inset-0 bg-gray-800 bg-opacity-75">
+        <LoginPage onLogin={handleLogin} onClose={closeModal} />
       </Modal>
     </div>
   );

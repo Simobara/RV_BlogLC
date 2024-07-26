@@ -37,7 +37,7 @@ const Body = () => {
 
   const handleSaveMainText = (newText) => {
     axios
-      .post('http://localhost:3001/api/text/mainText', { content: newText })
+      .post('http://localhost:3001/api/pippo/text/mainText', { content: newText })
       .then((response) => {
         setMainText(response.data.content);
       })

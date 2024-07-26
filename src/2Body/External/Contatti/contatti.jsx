@@ -83,7 +83,7 @@ const Contatti = () => {
   const handleCloseModalPP = () => setShowModalPP(false);
 
   return (
-    <div className="w-full h-[40rem] flex overflow-hidden">
+    <div className="w-full h-[45rem] flex overflow-hidden z-[10rem]">
       <div className="w-1/2 bg-pink-900 text-white flex flex-col items-start justify-start p-5">
         <div className="text-center items-center justify-center">
           <h2 className="text-3xl mb-4">
@@ -129,8 +129,8 @@ const Contatti = () => {
         </div>
       </div>
       <div className="w-1/2 bg-white p-10 flex items-center justify-center relative bg-no-repeat bg-center bg-cover" style={{ backgroundImage: `url(${LogoMain1})`, backgroundSize: '280% 220%', backgroundPosition: 'center -27rem' }}>
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent to-gray-800 opacity-50"></div>
-        <form onSubmit={handleSubmit} className="w-full max-w-lg relative z-10">
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent to-gray-800 opacity-50 z-[10px]"></div>
+        <form onSubmit={handleSubmit} className="w-full max-w-lg relative">
           <div className="mb-4">
             <label className="block  text-sm font-bold mb-2 ml-[10%] text-pink-500" htmlFor="nome">
               Nome *

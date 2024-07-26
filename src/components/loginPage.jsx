@@ -15,7 +15,7 @@ const LoginPage = ({ onLogin, onClose }) => {
   };
 
   return (
-    <div className="relative bg-white p-8 rounded-lg shadow-lg max-w-md mx-auto text-center">
+    <div className="relative bg-white p-8 rounded-lg shadow-lg max-w-md mx-auto text-center z-[50px]">
       <button className="absolute top-2 right-2 bg-transparent border-none text-xl cursor-pointer text-red-500 hover:text-pink-500" onClick={onClose}>
         ✖
       </button>
